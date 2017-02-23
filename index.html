@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="login">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="ngDraggable.js"></script>
+    <link href="login.css" rel="stylesheet">
+    <script src="login.js"></script>
+	 
+
+	
+	
+  <script> 
+document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('contents').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.getElementById('contents').style.visibility="visible";
+      },1000);
+  }
+}</script>
+</head>
+<body>
+<center><div id="load" >
+	<div id="toto"><strong>Kind words do not cost much. Yet they accomplish much."</strong></div>
+   <div><img src="footer-logo.png"  height="100"  width="100"></div>
+	
+	 </div></center>
+	 <div id="contents">
+	
+
+
+
+    <div>
+        <ng-view>
+
+        </ng-view>
+    </div>
+
+</body>
+</html>
